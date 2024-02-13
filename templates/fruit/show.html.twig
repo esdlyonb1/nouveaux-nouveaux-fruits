@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello FruitController!{% endblock %}
+
+{% block body %}
+
+
+
+        <div class="border border-dark">
+            <h3>{{ fruit.name }}</h3>
+            <p><strong>Price : {{ fruit.price }} €</strong></p>
+            <p>Color : {{ fruit.color }}</p>
+            <a class="btn btn-secondary" href="{{ path('app_fruit') }}">retour</a>
+            <a class="btn btn-danger" href="{{ path('delete_fruit', {id:fruit.id} ) }}">suppr</a>
+            <a class="btn btn-warning" href="{{ path('edit_fruit', {id:fruit.id} ) }}">edit</a>
+        </div>
+
+
+
+
+{% endblock %}

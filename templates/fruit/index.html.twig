@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello FruitController!{% endblock %}
+
+{% block body %}
+
+    {% for fruit in fruits %}
+
+        <div class="border border-dark">
+            <h3>{{ fruit.name }}</h3>
+            <p><strong>Price : {{ fruit.price }} €</strong></p>
+            <p>Color : {{ fruit.color }}</p>
+            <a class="btn btn-primary" href="{{ path("show_fruit", {id:fruit.id}) }}">Voir la page du fruit</a>
+        </div>
+
+    {% endfor %}
+
+
+{% endblock %}
